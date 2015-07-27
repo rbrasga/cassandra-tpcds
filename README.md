@@ -55,7 +55,7 @@ A version which has been slightly modified to reference database names, not just
 
 To use these queries, run
 ```
-dse spark
+dse shark
 use tpcds;
 source queries/q19.sql;
 ```

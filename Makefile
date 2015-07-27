@@ -21,7 +21,7 @@ data: $(datatargets) dirs
 $(datatargets): data.%:
 	${TPCDS_ROOT}/tools/dsdgen -SCALE ${TPCDS_SCALE_FACTOR} -DISTRIBUTIONS ${TPCDS_ROOT}/tools/tpcds.idx -TERMINATE N -DIR ${OUTDIR} -PARALLEL ${LISTLEN} -CHILD $*
 
-ddl: cass-create-tables.sh
+ddl:
 	cqlsh -f alltables.sql
 
 compile: dirs DelimParser DelimLoad
