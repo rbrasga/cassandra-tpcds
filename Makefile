@@ -22,7 +22,7 @@ $(datatargets): data.%:
 	${TPCDS_ROOT}/tools/dsdgen -SCALE ${TPCDS_SCALE_FACTOR} -DISTRIBUTIONS ${TPCDS_ROOT}/tools/tpcds.idx -TERMINATE N -DIR ${OUTDIR} -PARALLEL ${LISTLEN} -CHILD $*
 
 ddl:
-	cqlsh -f alltables.sql
+	cqlsh -f alltables.sql ${IP_ADDR}
 
 compile: dirs DelimParser DelimLoad
 
